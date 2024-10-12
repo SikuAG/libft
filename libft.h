@@ -17,6 +17,7 @@
 # define FT_INT_MAX 2147483647
 
 # include <stdlib.h>
+# include <stdio.h>
 # include <unistd.h>
 # include <string.h>
 
