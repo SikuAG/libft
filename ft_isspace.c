@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-/*checks for a digit (0 through 9).*/
-int	ft_isdigit(int c)
+/*checks for a space.*/
+int	ft_isspace(int c)
 {
-	if (c >= 48 && c <= 57)
+	if (c == 32 || (c >= 9 && c <= 13))
 		return (1);
 	return (0);
 }

@@ -42,20 +42,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(ptr, bytes);
 	return (ptr);
 }
-
-/*The calloc() function allocates memory for an array of nmemb elements of
-size bytes each and returns a pointer to the allocated memory.
-The memory is set to zero. If nmemb or size is 0, then calloc() returns a
-unique pointer value that can later be successfully passed to free().
-void	*ft_calloc(size_t nmemb, size_t size)
-{
-	void	*ptr;
-
-	ptr = malloc(nmemb * size);
-	if (ptr == NULL)
-	{
-		return (NULL);
-	}
-	ft_bzero(ptr, nmemb * size);
-	return (ptr);
-}*/
