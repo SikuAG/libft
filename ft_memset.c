@@ -23,40 +23,10 @@ void	*ft_memset(void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		str[i] = (unsigned char)c;  // Asegura que c se trunca a un byte.
+		str[i] = (unsigned char)c;
 			i++;
 	}
 	return (s);
-}
-
-#include <stdio.h>
-#include <string.h>
-#include "libft.h"
-
-int main(void)
-{
-    char buffer[50]; // Un buffer de 50 bytes para nuestras pruebas.
-
-    // Prueba 1: Llenar el buffer con 'A'
-    ft_memset(buffer, 'A', 10);
-    buffer[10] = '\0'; // Agregamos un terminador nulo para imprimir como cadena.
-    printf("Test 1 - Llenar los primeros 10 bytes con 'A': %s\n", buffer);
-
-    // Prueba 2: Llenar el buffer con 'B' en los primeros 5 bytes.
-    ft_memset(buffer, 'B', 5);
-    buffer[10] = '\0'; // Aseguramos el terminador nulo.
-    printf("Test 2 - Llenar los primeros 5 bytes con 'B': %s\n", buffer);
-
-    // Prueba 3: Llenar todo el buffer con 'C'
-    ft_memset(buffer, 'C', 49); // Llenamos los primeros 49 bytes (sin '\0').
-    buffer[49] = '\0'; // Terminador nulo para que se imprima correctamente.
-    printf("Test 3 - Llenar todo el buffer con 'C': %s\n", buffer);
-
-    // Prueba 4: Llenar 0 bytes (no debería cambiar nada).
-    ft_memset(buffer, 'D', 0);
-    printf("Test 4 - Llenar 0 bytes (buffer intacto): %s\n", buffer);
-
-    return 0;
 }
 
 /*
